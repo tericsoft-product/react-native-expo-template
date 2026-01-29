@@ -1,0 +1,53 @@
+{
+    "cli": {
+        "version": ">= 14.0.0"
+    },
+    "build": {
+        "development": {
+            "developmentClient": true,
+            "distribution": "internal",
+            "env": {
+                "API_URL": "https://dev-api.yourapp.com",
+                "MODE": "development",
+                "BUILD_TYPE": "dev"
+            },
+            "android": {
+                "buildType": "apk"
+            }
+        },
+        "qa": {
+            "distribution": "internal",
+            "env": {
+                "API_URL": "https://qa-api.yourapp.com",
+                "MODE": "qa",
+                "BUILD_TYPE": "qa"
+            },
+            "android": {
+                "buildType": "apk"
+            }
+        },
+        "production": {
+            "env": {
+                "API_URL": "https://api.yourapp.com",
+                "MODE": "production",
+                "BUILD_TYPE": "prod"
+            },
+            "android": {
+                "buildType": "aab"
+            }
+        }
+    },
+    "submit": {
+        "production": {
+            "ios": {
+                "appleId": "your-apple-id@email.com",
+                "ascAppId": "1234567890",
+                "appleTeamId": "ABCD123456"
+            },
+            "android": {
+                "serviceAccountKeyPath": "./service-account.json",
+                "track": "production"
+            }
+        }
+    }
+}
