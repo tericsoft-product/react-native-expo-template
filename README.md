@@ -12,5 +12,5 @@
 ## :arrow_forward: Usage
 
 ```sh
-npx @react-native-community/cli@latest init MyApp --template https://github.com/tericsoft-product/ReactNative-Template-NEW-Architecture.git
+npx create-expo-app MyApp \--template https://github.com/tericsoft-product/react-native-expo-template.git
 ```
